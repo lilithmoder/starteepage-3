@@ -1,0 +1,19 @@
+#code snippet for workstuff section in startpage
+<div class="category">
+						<div class="links slick-start slick-single-arrow">
+							<ul>
+								<li class="title" role="heading" aria-level="2">workstuff</li>
+								<li><a href="https://mail.google.com/mail/u/1/#inbox">gmail</a></li>
+								<li><a href="https://uk.indeed.com/">indeed</a></li>
+								<li><a href="https://teams.microsoft.com/v2/">microsoft teams</a></li>
+								<li><a href="https://outlook.office365.com/mail/">outlook</a></li>
+							</ul>
+							<ul>
+						 <li class="title" role="heading" aria-level="2">cont.</li>
+                                <li><a href="https://chatgpt.com/">chatgpt</a></li>
+                                <li><a href="https://claude.ai/new">claude</a></li>
+                                <li><a href="https://www.getmyfirstjob.co.uk/">getmyfirstjob</a></li>
+                                <li><a href="https://gemini.google.com/app">gemini</a></li>
+                                </ul>
+						</div>
+					</div>

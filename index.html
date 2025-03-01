@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" class="default vapor">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Multi-theme web browser start page by Pawel Osmolski.">
+	<title>~/startpage</title>
+	<link rel="icon" type="image/x-icon" href="assets/media/favicon/favicon.ico">
+	<link rel="icon" sizes="192x192" href="assets/media/favicon/android-chrome-192x192.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicon/apple-touch-icon.png">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body class="fade-in jquery search">
+	<a href="#main-content" class="sr-only skip-link">Skip to main content</a>
+
+	<div id="startpage" class="container">
+		<canvas id="canvas" aria-label="Artwork" role="img"></canvas>
+		<div class="container-inner">
+			<header class="left-container" role="banner">
+				<h1 id="Date">&nbsp;</h1>
+
+				<div class="image border">
+					<a href="https://youtube.com/shorts/aspkMovJ7Ic?si=sajPO2Mg7QdAcRHe" draggable="false" title="Yes! I am lobotomised. It's how I'm so silly and fun!"></a>
+				</div>
+			</header>
+
+			<main id="main-content" class="right-container" role="main">
+				<div class="head">
+					<p>&gt; cd ~/<span class="blinking">_</span></p>
+				</div>
+
+				<div class="head-search">
+					<!-- Search actions:
+						https://duckduckgo.org/
+						https://www.google.com/search
+					-->
+					<form method="get" action="https://www.google.com/search" autocomplete="on" id="search" role="search">
+						<p>
+							<label id="searchLabel" class="prefix" for="search-input">&gt; search ~/</label>
+							<input class="search-field" id="search-input" type="text" name="q" maxlength="100" aria-labelledby="searchLabel" />
+							<!--
+							<textarea class="search-field" id="search-textarea" wrap="soft" type="text" name="q" maxlength="100" aria-labelledby="searchLabel"></textarea>
+							-->
+							<span class="blinking">_</span>
+						</p>
+					</form>
+				</div>
+
+				<nav class="bookmarks">
+					<div class="category">
+						<div class="links slick-start slick-single-arrow">
+							<ul>
+								<li class="title" role="heading" aria-level="2">socials</li>
+								<li><a href="https://messages.google.com/web/u/2/conversations">messages</a></li>
+								<li><a href="https://web.whatsapp.com/">whatsapp</a></li>
+								<li><a href="https://bsky.app/">bluesky</a></li>
+								<li><a href="https://www.instagram.com/">instagram</a></li>
+							</ul>
+							<ul>
+							 <li class="title" role="heading" aria-level="2">cont.</li>
+                                <li><a href="https://www.tiktok.com/foryou?lang=en">tiktok</a></li>
+                                <li><a href="https://x.com">twitter</a></li>
+                                <li><a href="https://discord.com/channels/@me">discord</a></li>
+                                <li><a href=""></a></li>
+                                </ul>
+						</div>
+					</div>
+
+					<div class="category">
+						<div class="links">
+							<ul>
+								<li class="title" role="heading" aria-level="2"><a href="https://knaben.eu/">piracy</a></li>
+								<li><a href="https://www.1337x.to/">1337x</a></li>
+								<li><a href="https://rutracker.org/forum/index.php">rutracker</a></li>
+								<li><a href="https://yts.mx/">yts</a></li>
+								<li><a href="https://torbox.app/dashboard">torbox</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="category">
+						<div class="links slick-start slick-single-arrow">
+							<ul>
+								<li class="title" role="heading" aria-level="2">workstuff</li>
+								<li><a href="https://labsimapp.testout.com/v6_0_650/index.html/my-courses">comptia testout</a></li>
+								<li><a href="https://generation.instructure.com/courses/3642">canvas</a></li>
+								<li><a href="https://teams.microsoft.com/v2/">microsoft teams</a></li>
+								<li><a href="https://outlook.office365.com/mail/">outlook</a></li>
+							</ul>
+							<ul>
+						 <li class="title" role="heading" aria-level="2">cont.</li>
+                                <li><a href="https://chatgpt.com/">chatgpt</a></li>
+                                <li><a href="https://claude.ai/new">claude</a></li>
+                                <li><a href="https://gemini.google.com/app">gemini</a></li>
+                                <li><a href="https://mail.google.com/mail/u/2/#inbox">gmail</a></li>
+                                </ul>
+						</div>
+					</div>
+
+					<div class="category">
+						<div class="links slick-start slick-single-arrow">
+							<ul>
+								<li class="title" role="heading" aria-level="2"><a href="https://reddit.com">reddit</a></li>
+								<li><a href="https://reddit.com/">homepage</a></li>
+								<li><a href="https://reddit.com/r/vinyl/">r/vinyl</a></li>
+								<li><a href="https://reddit.com/r/hyprland/">r/hyprland</a></li>
+								<li><a href="https://reddit.com/r/unixporn/">r/unixporn</a></li>
+							</ul>
+							<ul>
+								<li class="title" role="heading" aria-level="2">cont.</li>
+								<li><a href="https://reddit.com/r/Fedora">r/fedora</a></li>
+								<li><a href="https://www.reddit.com/r/TransDIY/">r/transdiy</a></li>
+								<li><a href="https://www.reddit.com/r/Piracy/">r/piracy</a></li>
+								<li><a href="https://www.reddit.com/r/NobaraProject/">r/nobara</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+
+				<nav class="bookmarks">
+					<div class="category">
+						<div class="links">
+							<ul>
+								<li class="title" role="heading" aria-level="2">shopping</li>
+								<li><a href="https://amazon.co.uk">amazon</a></li>
+								<li><a href="https://ebay.co.uk">ebay</a></li>
+								<li><a href="https://www.discogs.com/">discogs</a></li>
+								<li><a href="https://etsy.com/">etsy</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="category">
+						<div class="links">
+							<ul>
+								<li class="title" role="heading" aria-level="2">music</li>
+								<li><a href="https://www.highdeftapetransfers.ca/">hdtt</a></li>
+								<li><a href="https://upvhq.blogspot.com/">ultimate psych vinyl hq</a></li>
+								<li><a href="https://www.bandcamp.com/">bandcamp</a></li>
+								<li><a href="https://soundcloud.com">soundcloud</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="category">
+						<div class="links">
+							<ul>
+								<li class="title" role="heading" aria-level="2">utils</li>
+								<li><a href="https://my.nextdns.io/c5aca1/setup">nextdns</a></li>
+								<li><a href="https://mullvad.net/en/account/login">mullvad vpn</a></li>
+								<li><a href="https://github.com/JaKooLit/Hyprland-Dots">hyprland dots</a></li>
+								<li><a href="https://colab.research.google.com/drive/1dC9nVxk3V_VPjUADsnFu8EiT-xnU1tGH?usp=sharing">demucs</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="category">
+						<div class="links">
+							<ul>
+								<li class="title" role="heading" aria-level="2">fun</li>
+								<li><a href="https://territorial.io/">territorial.io</a></li>
+								<li><a href="https://youtube.com/">youtube</a></li>
+								<li><a href="https://twitch.tv/">twitch</a></li>
+								<li><a href="https://knaben.eu/">knaben</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</main>
+			<!--
+			<div class="about">
+				<a href="https://github.com/Pav-Osmolski/startpage">pav-osmolski/startpage</a>
+			</div>
+			-->
+		</div>
+	</div>
+	<script src="assets/js/async-loader.js"></script>
+</body>
+
+</html>

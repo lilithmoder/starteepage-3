@@ -116,7 +116,7 @@ html, body {
 	background-color: var(--color-bg);
 	color: var(--color-fg);
 	text-align: center;
-	font-family: "VictorMono Nerd Font";
+	font-family: "SF Pro Display";
 	font-weight: 300;
 	height: 100%;
 	width: 100%;
@@ -135,7 +135,7 @@ canvas {
 }
 
 #Date {
-	font-family: "VictorMono Nerd Font";
+	font-family: "SF Pro Display";
 	font-weight: 500;
 	font-size: 40px;
 	min-width: 1px;
@@ -465,7 +465,7 @@ body.search.textarea #search #search-input {
 	background: none;
 	border: none;
 	color: var(--color-fg);
-	font-family: 'VictorMono Nerd Font';
+	font-family: 'SF Pro Display';
 	font-weight: 300;
 	font-size: 40px;
 	line-height: 46px;

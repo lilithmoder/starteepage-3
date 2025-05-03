@@ -1,0 +1,99 @@
+/* Add this to your existing style.css or create a new rss-styles.css file */
+
+/* Style the overall RSS section */
+.rss-section {
+    /* Add any specific spacing if needed */
+    margin-top: 20px; /* Adjust as needed */
+}
+
+/* Style individual feed containers */
+#rss-feeds .rss-feed-container {
+margin-bottom: 20px; /* Space between different feeds */
+padding-bottom: 10px;
+border-bottom: 1px solid var(--border-color); /* Optional separator */
+}
+
+#rss-feeds .rss-feed-container:last-child {
+border-bottom: none; /* Remove border from the last feed */
+margin-bottom: 0;
+}
+
+
+/* Style the title of each feed */
+#rss-feeds .rss-feed-title {
+font-size: 18px; /* Slightly smaller than category titles */
+color: var(--color-link-title); /* Use title color */
+margin-bottom: 8px;
+font-weight: bold;
+text-align: left; /* Align feed titles left */
+padding-left: 5px; /* Align with list items */
+}
+
+/* Style the list of feed items */
+#rss-feeds .rss-item-list {
+list-style: none;
+padding: 0;
+margin: 0;
+text-align: left; /* Align list items left */
+}
+
+/* Style individual feed items */
+#rss-feeds .rss-item {
+font-size: 14px; /* Slightly smaller font size for items */
+padding: 3px 5px; /* Adjust padding */
+white-space: nowrap; /* Prevent wrapping */
+overflow: hidden; /* Hide overflow */
+text-overflow: ellipsis; /* Add ellipsis (...) for overflow */
+max-width: 100%; /* Ensure it doesn't overflow container */
+}
+
+#rss-feeds .rss-item a {
+/* Inherit link colors or define specific ones */
+color: var(--color-link);
+text-decoration: none;
+}
+
+#rss-feeds .rss-item a:visited {
+color: var(--color-link-visited);
+}
+
+#rss-feeds .rss-item a:hover {
+color: var(--color-link-hover);
+text-decoration: underline; /* Add underline on hover */
+}
+
+/* Style for the loading message */
+#rss-feeds .rss-loading {
+font-style: italic;
+color: var(--color-fg); /* Use foreground color */
+opacity: 0.7;
+text-align: center;
+}
+
+/* Style for error messages */
+#rss-feeds .rss-error {
+color: var(--color-link); /* Use a warning color (like link red) */
+font-style: italic;
+text-align: left;
+padding-left: 5px;
+}
+
+/* Ensure the category div for RSS takes full width if needed */
+/* You might need to adjust this based on how many columns you want */
+#rss-feeds.category {
+width: 100%; /* Make the RSS category span full width initially */
+max-width: 90%; /* Limit width slightly */
+margin: 0 auto; /* Center it */
+}
+
+/* Adjust layout within the RSS category if needed */
+#rss-feeds .links {
+width: 100%; /* Ensure the inner links div uses the full width */
+align-items: stretch; /* Stretch items instead of centering */
+}
+
+#rss-feeds .links ul {
+width: 100%; /* Make the ul take full width */
+}
+
+

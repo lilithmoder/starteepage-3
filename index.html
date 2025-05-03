@@ -10,6 +10,7 @@
 	<link rel="icon" sizes="192x192" href="assets/media/favicon/android-chrome-192x192.png">
 	<link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicon/apple-touch-icon.png">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/rss-styles.css">
 </head>
 
 <body class="fade-in jquery search">
@@ -19,7 +20,7 @@
 		<canvas id="canvas" aria-label="Artwork" role="img"></canvas>
 		<div class="container-inner">
 			<header class="left-container" role="banner">
-				<h1 id="Date">&nbsp;</h1>
+				<h1 id="Date"> </h1>
 
 				<div class="image border">
 					<a href="https://youtube.com/shorts/aspkMovJ7Ic?si=sajPO2Mg7QdAcRHe" draggable="false" title="Yes! I am lobotomised. It's how I'm so silly and fun!"></a>
@@ -28,21 +29,14 @@
 
 			<main id="main-content" class="right-container" role="main">
 				<div class="head">
-					<p>&gt; cd ~/<span class="blinking">_</span></p>
+					<p>> cd ~/<span class="blinking">_</span></p>
 				</div>
 
 				<div class="head-search">
-					<!-- Search actions:
-						https://duckduckgo.org/
-						https://www.google.com/search
-					-->
 					<form method="get" action="https://www.google.com/search" autocomplete="on" id="search" role="search">
 						<p>
-							<label id="searchLabel" class="prefix" for="search-input">&gt; search ~/</label>
+							<label id="searchLabel" class="prefix" for="search-input">> search ~/</label>
 							<input class="search-field" id="search-input" type="text" name="q" maxlength="100" aria-labelledby="searchLabel" />
-							<!--
-							<textarea class="search-field" id="search-textarea" wrap="soft" type="text" name="q" maxlength="100" aria-labelledby="searchLabel"></textarea>
-							-->
 							<span class="blinking">_</span>
 						</p>
 					</form>
@@ -168,15 +162,23 @@
 						</div>
 					</div>
 				</nav>
-			</main>
-			<!--
-			<div class="about">
-				<a href="https://github.com/Pav-Osmolski/startpage">pav-osmolski/startpage</a>
+
+				<nav class="bookmarks rss-section">
+					<div class="category" id="rss-feeds">
+						<div class="links">
+							<ul>
+								<li class="title" role="heading" aria-level="2">RSS Feeds</li>
+								<li class="rss-loading">Loading feeds...</li>
+							</ul>
+						</div>
+					</div>
+					</nav>
+				</main>
 			</div>
-			-->
-		</div>
 	</div>
+
 	<script src="assets/js/async-loader.js"></script>
+	<script src="assets/js/rss-reader.js"></script>
 </body>
 
 </html>

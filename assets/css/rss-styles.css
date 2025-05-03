@@ -1,153 +1,99 @@
-/* --- Layout Styles --- */
+/* Add this to your existing style.css or create a new rss-styles.css file */
 
-/* Container for the main content columns (bookmarks and RSS) */
-#content-columns {
-display: flex; /* Enable flexbox */
-flex-direction: row; /* Arrange columns side-by-side by default */
-flex-wrap: nowrap; /* Prevent wrapping on wide screens */
-gap: 30px; /* Space between the columns */
-align-items: flex-start; /* Align columns to the top */
-width: 100%; /* Take full width of the parent */
-padding: 0 20px; /* Add some horizontal padding */
-box-sizing: border-box; /* Include padding in width calculation */
+/* Style the overall RSS section */
+.rss-section {
+    /* Add any specific spacing if needed */
+    margin-top: 20px; /* Adjust as needed */
 }
 
-/* Styling for the bookmarks column */
-#bookmarks-column {
-flex: 2; /* Make bookmarks column take up 2/3 of the space */
-min-width: 0; /* Allow column to shrink if needed */
-/* Bookmarks navs will stack vertically inside this column */
-}
-
-/* Styling for the RSS column */
-#rss-column {
-flex: 1; /* Make RSS column take up 1/3 of the space */
-min-width: 0; /* Allow column to shrink */
-/* Adjust margin/padding if needed, removing defaults that might interfere */
-margin-top: 0; /* Align top with bookmarks */
-}
-
-/* Ensure the .category inside RSS column takes full width of its parent */
-#rss-column .category {
-width: 100%;
-padding-top: 0; /* Adjust spacing if needed */
-}
-
-/* --- Responsive Styles --- */
-
-/* Media query for medium/smaller screens */
-@media only screen and (max-width: 1000px) { /* Adjust this breakpoint as needed */
-    #content-columns {
-    flex-direction: column; /* Stack columns vertically */
-    gap: 20px; /* Adjust gap for vertical layout */
-    padding: 0 10px; /* Adjust padding */
-    }
-
-    /* Make columns take full width when stacked */
-    #bookmarks-column,
-    #rss-column {
-    flex-basis: 100%; /* Reset flex-basis */
-    flex: 1; /* Allow them to take full width */
-    width: 100%;
-    }
-
-    /* Re-adjust category width for bookmarks when stacked if needed */
-    /* Your original style.css might handle this already */
-    #bookmarks-column .category {
-    /* width: 50%; /* Example: 2 categories per row */
-    /* Or keep 100% if you want them full width */
-    }
-}
-
-/* Media query for very small screens (optional) */
-@media only screen and (max-width: 600px) {
-    #bookmarks-column .category {
-    width: 100%; /* Ensure categories stack nicely */
-    }
-    #content-columns {
-    padding: 0 5px; /* Reduce padding further */
-    }
-}
-
-
-/* --- RSS Feed Styles (Integrated from previous version) --- */
-
-/* Style individual feed containers within the RSS column */
-#rss-column .rss-feed-container {
-margin-bottom: 20px;
+/* Style individual feed containers */
+#rss-feeds .rss-feed-container {
+margin-bottom: 20px; /* Space between different feeds */
 padding-bottom: 10px;
-border-bottom: 1px solid var(--border-color);
+border-bottom: 1px solid var(--border-color); /* Optional separator */
 }
 
-#rss-column .rss-feed-container:last-child {
-border-bottom: none;
+#rss-feeds .rss-feed-container:last-child {
+border-bottom: none; /* Remove border from the last feed */
 margin-bottom: 0;
 }
 
+
 /* Style the title of each feed */
-#rss-column .rss-feed-title {
-font-size: 18px;
-color: var(--color-link-title);
+#rss-feeds .rss-feed-title {
+font-size: 18px; /* Slightly smaller than category titles */
+color: var(--color-link-title); /* Use title color */
 margin-bottom: 8px;
 font-weight: bold;
-text-align: left;
-padding-left: 5px;
+text-align: left; /* Align feed titles left */
+padding-left: 5px; /* Align with list items */
 }
 
 /* Style the list of feed items */
-#rss-column .rss-item-list {
+#rss-feeds .rss-item-list {
 list-style: none;
 padding: 0;
 margin: 0;
-text-align: left;
+text-align: left; /* Align list items left */
 }
 
 /* Style individual feed items */
-#rss-column .rss-item {
-font-size: 14px;
-padding: 3px 5px;
-white-space: nowrap;
-overflow: hidden;
-text-overflow: ellipsis;
-max-width: 100%;
+#rss-feeds .rss-item {
+font-size: 14px; /* Slightly smaller font size for items */
+padding: 3px 5px; /* Adjust padding */
+white-space: nowrap; /* Prevent wrapping */
+overflow: hidden; /* Hide overflow */
+text-overflow: ellipsis; /* Add ellipsis (...) for overflow */
+max-width: 100%; /* Ensure it doesn't overflow container */
 }
 
-#rss-column .rss-item a {
+#rss-feeds .rss-item a {
+/* Inherit link colors or define specific ones */
 color: var(--color-link);
 text-decoration: none;
 }
 
-#rss-column .rss-item a:visited {
+#rss-feeds .rss-item a:visited {
 color: var(--color-link-visited);
 }
 
-#rss-column .rss-item a:hover {
+#rss-feeds .rss-item a:hover {
 color: var(--color-link-hover);
-text-decoration: underline;
+text-decoration: underline; /* Add underline on hover */
 }
 
 /* Style for the loading message */
-#rss-column .rss-loading {
+#rss-feeds .rss-loading {
 font-style: italic;
-color: var(--color-fg);
+color: var(--color-fg); /* Use foreground color */
 opacity: 0.7;
 text-align: center;
 }
 
 /* Style for error messages */
-#rss-column .rss-error {
-color: var(--color-link);
+#rss-feeds .rss-error {
+color: var(--color-link); /* Use a warning color (like link red) */
 font-style: italic;
 text-align: left;
 padding-left: 5px;
 }
 
-/* Ensure the inner links div uses the full width */
-#rss-column .links {
-width: 100%;
-align-items: stretch;
+/* Ensure the category div for RSS takes full width if needed */
+/* You might need to adjust this based on how many columns you want */
+#rss-feeds.category {
+width: 100%; /* Make the RSS category span full width initially */
+max-width: 90%; /* Limit width slightly */
+margin: 0 auto; /* Center it */
 }
 
-#rss-column .links ul {
-width: 100%;
+/* Adjust layout within the RSS category if needed */
+#rss-feeds .links {
+width: 100%; /* Ensure the inner links div uses the full width */
+align-items: stretch; /* Stretch items instead of centering */
 }
+
+#rss-feeds .links ul {
+width: 100%; /* Make the ul take full width */
+}
+
+

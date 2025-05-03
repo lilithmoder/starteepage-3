@@ -116,7 +116,7 @@ html, body {
 	background-color: var(--color-bg);
 	color: var(--color-fg);
 	text-align: center;
-	font-family: "Geist Nerd Font";
+	font-family: "Geist";
 	font-weight: 300;
 	height: 100%;
 	width: 100%;
@@ -135,7 +135,7 @@ canvas {
 }
 
 #Date {
-	font-family: "Geist Nerd Font";
+	font-family: "Geist";
 	font-weight: 500;
 	font-size: 40px;
 	min-width: 1px;

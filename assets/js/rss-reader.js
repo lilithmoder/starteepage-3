@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Configuration ---
     // Add the URLs of the RSS feeds you want to display here
     const rssFeedUrls = [
-        'https://rss.nytimes.com/services/xml/rss/nyt/World.xml', // Example: NYT World News
-        'https://feeds.bbci.co.uk/news/world/rss.xml', // Example: BBC World News
-        'https://www.theverge.com/rss/index.xml' // Example: The Verge
+        'https://feeds.bbci.co.uk/news/world/rss.xml', // Example: NYT World News
+        'https://www.theverge.com/rss/index.xml', // Example: BBC World News
+        'https://lightroomkillertips.com/feed/' // Example: The Verge
         // Add more feed URLs here as strings, separated by commas
     ];
 

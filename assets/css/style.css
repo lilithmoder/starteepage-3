@@ -1,9 +1,6 @@
 
 /* google fonts downloaded via https://gwfh.mranftl.com/fonts */
 
-
-
-
 html.default {
 	--grid-width: 1280px;
 	--background-position: center;
@@ -15,99 +12,99 @@ html.default {
 	--image-aspect-ratio: 1/1;
 	--image-filter: none;
 
-	/* Gruvbox Dark theme colors */
-	--color-bg: #282828; /* Dark background */
-	--color-fg: #ebdbb2; /* Light beige foreground */
-	--color-link: #fb4934; /* Bright red links */
-	--color-link-visited: #d3869b; /* Muted purple visited links */
-	--color-link-hover: #8ec07c; /* Soft green hover */
-	--color-link-title: #fabd2f; /* Golden yellow link titles */
+	/* Wallust theme colors */
+	--color-bg: #111010; /* Background */
+	--color-fg: #F4F1EF; /* Foreground */
+	--color-link: #8A814C; /* Using color11 as a distinct link color */
+	--color-link-visited: #A59C75; /* Using color12 as a distinct visited link color */
+	--color-link-hover: #E7E2DF; /* Using color7 for hover - light */
+	--color-link-title: #DCD2C8; /* Using color13 for titles */
 
-	--border-color: #ebdbb2; /* Light border color */
+	--border-color: #F4F1EF; /* Foreground color for borders */
 	--border-style: solid;
 	--border-radius: 12px;
 
-	--scrollbar-primary: #fb4934; /* Bright red scrollbar */
-	--scrollbar-secondary: #282828; /* Matches background */
+	--scrollbar-primary: #8A814C; /* Using color11 for scrollbar */
+	--scrollbar-secondary: #111010; /* Matches background */
 }
 
 /* Optionally update additional themes or elements as needed */
 html.vapor {
 	--image: url(../media/vapor/DSC_1185.JPG);
-	--border-color: #fb4934;
-	--scrollbar-primary: #d3869b;
-	--scrollbar-secondary: #282828;
+	--border-color: #8A814C; /* Updated border color */
+	--scrollbar-primary: #A59C75; /* Updated scrollbar primary */
+	--scrollbar-secondary: #111010; /* Updated scrollbar secondary */
 
 
-filter: hue-rotate(var(--hue-rotate));
+	filter: hue-rotate(var(--hue-rotate));
 
 }
 
 html.eldenring-ranni {
 
---image: url(../media/eldenring/ranni-the-witch.webp);
---image-filter: hue-rotate(calc(var(--hue-rotate) / -1)) saturate(0.4) contrast(1.1);
---color-link: #9c97a0;
---color-link-title: #eab2b2;
---hue-rotate: 5deg;
---scrollbar-primary: #db67aa;
+	--image: url(../media/eldenring/ranni-the-witch.webp);
+	--image-filter: hue-rotate(calc(var(--hue-rotate) / -1)) saturate(0.4) contrast(1.1);
+	--color-link: #A59D96; /* Updated based on wallust mapping */
+	--color-link-title: #DCD2C8; /* Updated based on wallust mapping */
+	--hue-rotate: 5deg;
+	--scrollbar-primary: #A59C75; /* Updated scrollbar primary */
 
-filter: hue-rotate(var(--hue-rotate)) saturate(2);
+	filter: hue-rotate(var(--hue-rotate)) saturate(2);
 
 }
 
 html.eldenring-ranni-dark-moon {
 
---image: url(../media/eldenring/ranni-dark-moon.webp);
---image-aspect-ratio: 3/4;
---image-filter: hue-rotate(calc(var(--hue-rotate) / -1)) saturate(0.4) contrast(0.9);
---color-fg: #bdbfc8;
---color-link: #8b8a92;
---color-link-visited: #8b82ab;
---color-link-hover: #a260f5;
---color-link-title: #b7acef;
---hue-rotate: -16deg;
---canvas-filter: brightness(0.7) contrast(0.84) hue-rotate(20deg) opacity(0.2);
---scrollbar-primary: #5e72fc;
+	--image: url(../media/eldenring/ranni-dark-moon.webp);
+	--image-aspect-ratio: 3/4;
+	--image-filter: hue-rotate(calc(var(--hue-rotate) / -1)) saturate(0.4) contrast(0.9);
+	--color-fg: #E7E2DF; /* Updated based on wallust mapping */
+	--color-link: #A29F9C; /* Updated based on wallust mapping */
+	--color-link-visited: #A59C75; /* Updated based on wallust mapping */
+	--color-link-hover: #F4F1EF; /* Updated based on wallust mapping */
+	--color-link-title: #E1D7D0; /* Updated based on wallust mapping */
+	--hue-rotate: -16deg;
+	--canvas-filter: brightness(0.7) contrast(0.84) hue-rotate(20deg) opacity(0.2);
+	--scrollbar-primary: #676139; /* Updated scrollbar primary */
 
-filter: hue-rotate(var(--hue-rotate)) saturate(2) contrast(1.2);
+	filter: hue-rotate(var(--hue-rotate)) saturate(2) contrast(1.2);
 
 }
 
 html.eldenring-potboy {
 
---image: url(../media/eldenring/potboy.gif);
---image-filter: hue-rotate(calc(var(--hue-rotate) / -1)) saturate(0.4) contrast(1.1);
---color-link: #9c97a0;
---color-link-visited: #ffcccc;
---color-link-hover: #ff7979;
---color-link-title: #eab2b2;
---hue-rotate: -15deg;
---scrollbar-primary: #da486a;
+	--image: url(../media/eldenring/potboy.gif);
+	--image-filter: hue-rotate(calc(var(--hue-rotate) / -1)) saturate(0.4) contrast(1.1);
+	--color-link: #A59D96; /* Updated based on wallust mapping */
+	--color-link-visited: #DCD2C8; /* Updated based on wallust mapping */
+	--color-link-hover: #E7E2DF; /* Updated based on wallust mapping */
+	--color-link-title: #DCD2C8; /* Updated based on wallust mapping */
+	--hue-rotate: -15deg;
+	--scrollbar-primary: #8A814C; /* Updated scrollbar primary */
 
-filter: hue-rotate(var(--hue-rotate)) saturate(2);
+	filter: hue-rotate(var(--hue-rotate)) saturate(2);
 
 }
 
 html.halo {
 
---background-position: 40% 100%;
---background-image: url(../media/halo/halo-ring-bg.jpg);
---background-filter: hue-rotate(calc(var(--hue-rotate) / -1)) saturate(1.3) contrast(0.8);
---image: url(../media/halo/halo.gif);
---image-aspect-ratio: 3/2;
---image-filter: hue-rotate(calc(var(--hue-rotate) / -1)) saturate(1.1) contrast(0.9);
---color-fg: #c1c3c9;
---color-bg: #202020;
---color-link: #9997a3;
---color-link-visited: #a6a6a6;
---color-link-hover: #a260f5;
---color-link-title: #ac9bff;
---hue-rotate: 10deg;
---canvas-filter:brightness(0.6) contrast(0.9) hue-rotate(20deg) opacity(0.1);
---scrollbar-primary: #74923e;
+	--background-position: 40% 100%;
+	--background-image: url(../media/halo/halo-ring-bg.jpg);
+	--background-filter: hue-rotate(calc(var(--hue-rotate) / -1)) saturate(1.3) contrast(0.8);
+	--image: url(../media/halo/halo.gif);
+	--image-aspect-ratio: 3/2;
+	--image-filter: hue-rotate(calc(var(--hue-rotate) / -1)) saturate(1.1) contrast(0.9);
+	--color-fg: #E1D7D0; /* Updated based on wallust mapping */
+	--color-bg: #12100D; /* Updated based on wallust mapping */
+	--color-link: #A29F9C; /* Updated based on wallust mapping */
+	--color-link-visited: #A9A19C; /* Updated based on wallust mapping */
+	--color-link-hover: #F4F1EF; /* Updated based on wallust mapping */
+	--color-link-title: #DCD2C8; /* Updated based on wallust mapping */
+	--hue-rotate: 10deg;
+	--canvas-filter:brightness(0.6) contrast(0.9) hue-rotate(20deg) opacity(0.1);
+	--scrollbar-primary: #7C7558; /* Updated scrollbar primary */
 
-filter: hue-rotate(var(--hue-rotate)) saturate(1) contrast(1.2);
+	filter: hue-rotate(var(--hue-rotate)) saturate(1) contrast(1.2);
 
 }
 
@@ -135,25 +132,25 @@ canvas {
 }
 
 #Date {
-	font-family: "Geist";
-	font-weight: 500;
-	font-size: 40px;
-	min-width: 1px;
-	min-height: 52px;
-	margin: 25px 0;
+font-family: "Geist";
+font-weight: 500;
+font-size: 40px;
+min-width: 1px;
+min-height: 52px;
+margin: 25px 0;
 }
 
 @media only screen and (max-width: 900px) {
 	#Date {
-		display: flex;
-		align-items: flex-end;
-		height: 110px;
-		margin: 0;
-		position: absolute;
-		right: calc(50% - 430px);
-		top: 0;
-		font-size: 35px;
-		max-width: 170px;
+	display: flex;
+	align-items: flex-end;
+	height: 110px;
+	margin: 0;
+	position: absolute;
+	right: calc(50% - 430px);
+	top: 0;
+	font-size: 35px;
+	max-width: 170px;
 	}
 }
 
@@ -435,67 +432,67 @@ body.search.textarea #search #search-input {
 	display: none;
 }
 #search {
-  display: flex;
-  position: relative;
-  margin: 0 auto 40px;
-  background: transparent;
-  width: 100%;
-  overflow: hidden;
+display: flex;
+position: relative;
+margin: 0 auto 40px;
+background: transparent;
+width: 100%;
+overflow: hidden;
 }
 
 #search p {
-	display: flex;
-	position: relative;
-	margin: 0 20px;
-	padding: 0;
-	width: 100%;
+display: flex;
+position: relative;
+margin: 0 20px;
+padding: 0;
+width: 100%;
 }
 @media only screen and (min-width: 901px) {
 	#search p {
-		margin: 0 20%;
+	margin: 0 20%;
 	}
 }
 @media only screen and (max-width: 900px) {
 	#search {
-		margin: 30px 0 12px;
+	margin: 30px 0 12px;
 	}
 }
 
 #search .search-field {
-	background: none;
-	border: none;
-	color: var(--color-fg);
-	font-family: 'Geist';
-	font-weight: 300;
-	font-size: 40px;
-	line-height: 46px;
-	padding: 0;
-	margin: 0;
-	outline: none;
-	order: 1;
-	overflow: hidden;
-	z-index: 1;
+background: none;
+border: none;
+color: var(--color-fg);
+font-family: 'Geist';
+font-weight: 300;
+font-size: 40px;
+line-height: 46px;
+padding: 0;
+margin: 0;
+outline: none;
+order: 1;
+overflow: hidden;
+z-index: 1;
 }
 
 #search input[type=text] {
-	position: relative;
-	height: 46px;
-	left: -20px;
-	text-indent: 1px;
+position: relative;
+height: 46px;
+left: -20px;
+text-indent: 1px;
 }
 
 #search textarea {
-	width: 100%;
-	height: calc(46px * 2 + 5px);
-	position: absolute;
-	left: 0;
-	top: 0;
-	resize: none;
-	text-indent: 198px;
+width: 100%;
+height: calc(46px * 2 + 5px);
+position: absolute;
+left: 0;
+top: 0;
+resize: none;
+text-indent: 198px;
 }
 
 #search p > label.prefix {
-	flex: 0 0 auto;
+flex: 0 0 auto;
 }
 
 input[type=text]:focus ~ span.blinking,
@@ -505,7 +502,7 @@ textarea:focus ~ span.blinking {
 }
 
 .search:focus {
-  outline: none;
+	outline: none;
 }
 
 /* Slick Buttons */
@@ -537,18 +534,18 @@ html {
 }
 
 body::-webkit-scrollbar {
-  width: 10px;
+	width: 10px;
 }
 
 body::-webkit-scrollbar-track {
-  background-color: var(--color-fg);
-  border-radius: 100px;
+	background-color: var(--color-fg); /* Updated to new fg */
+	border-radius: 100px;
 }
 
 body::-webkit-scrollbar-thumb {
-  border-radius: 100px;
-  background-image: linear-gradient(180deg, var(--scrollbar-primary) 0%, var(--scrollbar-secondary) 99%);
-  box-shadow: inset 2px 2px 5px 0 rgba(255, 255, 255, 0.5);
+	border-radius: 100px;
+	background-image: linear-gradient(180deg, var(--scrollbar-primary) 0%, var(--scrollbar-secondary) 99%);
+	box-shadow: inset 2px 2px 5px 0 rgba(255, 255, 255, 0.5);
 }
 
 /* Keyframes */
@@ -570,5 +567,5 @@ body::-webkit-scrollbar-thumb {
 	}
 	100% {
 		opacity: 1;
-	 }
+	}
 }

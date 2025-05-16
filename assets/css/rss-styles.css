@@ -1,160 +1,147 @@
 /* In layout-rss-styles.css */
 
 /*
- *  Allow the main content area (.container-inner) to be wider on large screens.
- *  Your original style.css likely sets a max-width (e.g., 1280px) on .container-inner.
- *  This override will apply on screens wider than 1300px.
+ *  Attempt to force .container-inner to be wider on large screens.
+ *  The !important is for diagnostic purposes. If this works, we've found the conflicting style.
  */
-@media only screen and (min-width: 1301px) { /* Targets screens wider than the typical default max-width */
-    .container-inner {
-        max-width: 85vw; /* Use 85% of the viewport width */
-        /* Alternative: use a larger fixed value, e.g., max-width: 1800px; */
-        /* The margin: 0 auto; from your original style.css will keep it centered */
+@media only screen and (min-width: 1401px) { /* Using a slightly larger breakpoint */
+    body #startpage.container .container-inner { /* More specific selector */
+        max-width: 80vw !important; /* Using 80% of viewport width, with !important */
+        /* Fallback/alternative to test if vw is problematic (less likely): */
+        /* max-width: 1800px !important; */
     }
+
+    /*
+     *      The .right-container (parent of #content-columns) already has flex: 1 1 auto;
+     *      which should allow it to grow and fill the space made available by a wider .container-inner.
+     *      No changes should be strictly needed here if .container-inner expands.
+     */
 }
 
 /* --- Layout Styles for Content Columns --- */
 #content-columns {
-display: flex; /* Enables flexbox layout */
-flex-direction: row; /* Arranges children (columns) side-by-side */
-flex-wrap: nowrap; /* Prevents columns from wrapping to the next line on wide screens */
-gap: 30px; /* Defines the space between the bookmarks column and the RSS column */
-align-items: flex-start; /* Aligns columns to the top */
-width: 100%; /* Makes #content-columns take the full width of its parent (.right-container) */
-padding: 0 15px; /* Adds some padding inside the columns area, reduced slightly */
-box-sizing: border-box; /* Ensures padding doesn't add to the total width */
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+gap: 30px;
+align-items: flex-start;
+width: 100%;
+padding: 0 15px;
+box-sizing: border-box;
 }
 
-/* Styling for the bookmarks column (left side) */
 #bookmarks-column {
-flex: 2; /* Assigns 2 parts of the available space to this column */
-min-width: 0; /* Crucial for allowing flex items to shrink below their content size if needed */
-/* The two <nav class="bookmarks"> elements inside will stack vertically by default */
+flex: 2; /* Bookmarks take 2/3 of the space in #content-columns */
+min-width: 0; /* Allows shrinking if content is too wide */
 }
 
-/* Styling for the RSS column (right side) */
 #rss-column {
-flex: 1; /* Assigns 1 part of the available space to this column */
-min-width: 0; /* Allows the column to shrink properly */
-margin-top: 0; /* Ensures it aligns with the top of the bookmarks column */
+flex: 1; /* RSS feed takes 1/3 of the space in #content-columns */
+min-width: 0; /* Allows shrinking */
+margin-top: 0; /* Align with top of bookmarks column */
 }
 
-/* Ensures the .category div inside the RSS column takes full width */
 #rss-column .category {
 width: 100%;
-padding-top: 0; /* Reset padding if it was inherited */
+padding-top: 0;
 }
-
 
 /* --- Responsive Styles for Stacking on Smaller Screens --- */
-/* This media query applies when the screen width is 1000px or less */
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1000px) { /* Breakpoint for stacking */
     #content-columns {
-    flex-direction: column; /* Stacks the columns vertically */
-    gap: 20px; /* Adjusts the space between stacked columns */
-    padding: 0 10px; /* Adjusts padding for smaller screens */
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
     }
 
-    /* When stacked, both columns should take the full width */
     #bookmarks-column,
     #rss-column {
-    flex-basis: auto; /* Resets flex-basis to allow natural sizing based on content or other flex properties */
-    flex-grow: 1; /* Allows columns to grow if there's extra space (though width: 100% usually handles it) */
-    flex-shrink: 1; /* Allows columns to shrink if needed */
-    width: 100%; /* Makes each column take the full available width */
+    flex-basis: auto; /* Reset flex-basis */
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 100%; /* Columns take full width when stacked */
     }
 }
 
-/* Media query for very small screens (optional fine-tuning) */
-@media only screen and (max-width: 600px) {
-    #bookmarks-column .category { /* Ensures bookmark categories stack nicely if they don't already */
+@media only screen and (max-width: 600px) { /* Fine-tuning for very small screens */
+    #bookmarks-column .category {
     width: 100%;
     }
     #content-columns {
-    padding: 0 5px; /* Further reduces padding on very small screens */
+    padding: 0 5px;
     }
 }
 
-
 /* --- RSS Feed Specific Styles (Integrated and Scoped) --- */
-
-/* Style individual feed containers within the RSS column */
 #rss-column .rss-feed-container {
-margin-bottom: 20px; /* Space between different feeds */
+margin-bottom: 20px;
 padding-bottom: 10px;
-border-bottom: 1px solid var(--border-color); /* Optional separator */
+border-bottom: 1px solid var(--border-color);
 }
 
 #rss-column .rss-feed-container:last-child {
-border-bottom: none; /* Remove border from the last feed */
+border-bottom: none;
 margin-bottom: 0;
 }
 
-/* Style the title of each feed */
 #rss-column .rss-feed-title {
 font-size: 18px;
-color: var(--color-link-title); /* Use title color from your theme */
+color: var(--color-link-title);
 margin-bottom: 8px;
 font-weight: bold;
-text-align: left; /* Align feed titles to the left */
+text-align: left;
 padding-left: 5px;
 }
 
-/* Style the list of feed items */
 #rss-column .rss-item-list {
 list-style: none;
 padding: 0;
 margin: 0;
-text-align: left; /* Align list items to the left */
+text-align: left;
 }
 
-/* Style individual feed items */
 #rss-column .rss-item {
 font-size: 14px;
 padding: 3px 5px;
-white-space: nowrap; /* Prevent item text from wrapping */
-overflow: hidden; /* Hide overflowing text */
-text-overflow: ellipsis; /* Add "..." for overflowing text */
-max-width: 100%; /* Ensure item doesn't exceed column width */
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+max-width: 100%;
 }
 
 #rss-column .rss-item a {
-color: var(--color-link); /* Use link color from your theme */
+color: var(--color-link);
 text-decoration: none;
 }
 
 #rss-column .rss-item a:visited {
-color: var(--color-link-visited); /* Use visited link color */
+color: var(--color-link-visited);
 }
 
 #rss-column .rss-item a:hover {
-color: var(--color-link-hover); /* Use hover link color */
-text-decoration: underline; /* Add underline on hover */
+color: var(--color-link-hover);
+text-decoration: underline;
 }
 
-/* Style for the "Loading feeds..." message */
 #rss-column .rss-loading {
 font-style: italic;
-color: var(--color-fg); /* Use foreground color from your theme */
+color: var(--color-fg);
 opacity: 0.7;
 text-align: center;
 }
 
-/* Style for error messages if a feed fails to load */
 #rss-column .rss-error {
-color: var(--color-link); /* Use a warning/error color (e.g., red link color) */
+color: var(--color-link);
 font-style: italic;
 text-align: left;
 padding-left: 5px;
 }
 
-/* Ensure the inner .links div (used by JS) uses full width within RSS column */
 #rss-column .links {
 width: 100%;
-align-items: stretch; /* If it's a flex container itself */
+align-items: stretch;
 }
 
-/* Ensure the ul generated by JS also takes full width */
 #rss-column .links ul {
 width: 100%;
 }

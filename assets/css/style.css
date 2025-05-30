@@ -1,4 +1,3 @@
-
 /* google fonts downloaded via https://gwfh.mranftl.com/fonts */
 
 html.default {
@@ -13,19 +12,19 @@ html.default {
 	--image-filter: none;
 
 	/* Wallust theme colors */
-	--color-bg: #111010; /* Background */
-	--color-fg: #F4F1EF; /* Foreground */
-	--color-link: #8A814C; /* Using color11 as a distinct link color */
-	--color-link-visited: #A59C75; /* Using color12 as a distinct visited link color */
-	--color-link-hover: #E7E2DF; /* Using color7 for hover - light */
-	--color-link-title: #DCD2C8; /* Using color13 for titles */
+	--color-bg: #392A28; /* Background */
+	--color-fg: #F3F3F3; /* Foreground */
+	--color-link: #AB988B; /* Using color11 as a distinct link color */
+	--color-link-visited: #D5D1D0; /* Using color12 as a distinct visited link color */
+	--color-link-hover: #E6E6E6; /* Using color7 for hover - light */
+	--color-link-title: #D9D8D6; /* Using color13 for titles */
 
-	--border-color: #F4F1EF; /* Foreground color for borders */
+	--border-color: #F3F3F3; /* Foreground color for borders */
 	--border-style: solid;
 	--border-radius: 12px;
 
-	--scrollbar-primary: #8A814C; /* Using color11 for scrollbar */
-	--scrollbar-secondary: #111010; /* Matches background */
+	--scrollbar-primary: #AB988B; /* Using color11 for scrollbar */
+	--scrollbar-secondary: #392A28; /* Matches background */
 }
 
 /* Optionally update additional themes or elements as needed */

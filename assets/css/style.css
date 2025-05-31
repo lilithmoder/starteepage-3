@@ -29,7 +29,7 @@ html.default {
 
 /* Optionally update additional themes or elements as needed */
 html.vapor {
-	--image: url(../media/vapor/DSC_0796.JPG);
+	--image: url(../media/vapor/DSC_0796.jpg);
 	--border-color: #8A814C; /* Updated border color */
 	--scrollbar-primary: #A59C75; /* Updated scrollbar primary */
 	--scrollbar-secondary: #111010; /* Updated scrollbar secondary */

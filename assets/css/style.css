@@ -12,24 +12,24 @@ html.default {
 	--image-filter: none;
 
 	/* Wallust theme colors */
-	--color-bg: #392A28; /* Background */
-	--color-fg: #F3F3F3; /* Foreground */
-	--color-link: #AB988B; /* Using color11 as a distinct link color */
-	--color-link-visited: #D5D1D0; /* Using color12 as a distinct visited link color */
-	--color-link-hover: #E6E6E6; /* Using color7 for hover - light */
-	--color-link-title: #D9D8D6; /* Using color13 for titles */
+	--color-bg: #1c1c1c; /* Background */
+	--color-fg: #f0f0f0; /* Foreground */
+	--color-link: #bbbbbb; /* Using color11 as a distinct link color */
+	--color-link-visited: #888888; /* Using color12 as a distinct visited link color */
+	--color-link-hover: #ffffff; /* Using color7 for hover - light */
+	--color-link-title: #ffffff; /* Using color13 for titles */
 
-	--border-color: #F3F3F3; /* Foreground color for borders */
+	--border-color: #f0f0f0; /* Foreground color for borders */
 	--border-style: solid;
 	--border-radius: 12px;
 
-	--scrollbar-primary: #AB988B; /* Using color11 for scrollbar */
-	--scrollbar-secondary: #392A28; /* Matches background */
+	--scrollbar-primary: #bbbbbb; /* Using color11 for scrollbar */
+	--scrollbar-secondary: #1c1c1c; /* Matches background */
 }
 
 /* Optionally update additional themes or elements as needed */
 html.vapor {
-	--image: url(../media/vapor/DSC_0796.jpg);
+	--image: url(../media/vapor/DSC_1102.png);
 	--border-color: #8A814C; /* Updated border color */
 	--scrollbar-primary: #A59C75; /* Updated scrollbar primary */
 	--scrollbar-secondary: #111010; /* Updated scrollbar secondary */

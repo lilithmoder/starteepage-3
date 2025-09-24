@@ -11,20 +11,20 @@ html.default {
 	--image-aspect-ratio: 1/1;
 	--image-filter: none;
 
-	/* Wallust theme colors */
-	--color-bg: #1c1c1c; /* Background */
-	--color-fg: #f0f0f0; /* Foreground */
-	--color-link: #bbbbbb; /* Using color11 as a distinct link color */
-	--color-link-visited: #888888; /* Using color12 as a distinct visited link color */
-	--color-link-hover: #ffffff; /* Using color7 for hover - light */
-	--color-link-title: #ffffff; /* Using color13 for titles */
+	/* Rose Pine theme colors */
+	--color-bg: #191724; /* Base */
+	--color-fg: #e0def4; /* Text */
+	--color-link: #c4a7e7; /* Iris for links */
+	--color-link-visited: #9ccfd8; /* Foam for visited links */
+	--color-link-hover: #ebbcba; /* Rose for hover */
+	--color-link-title: #f6c177; /* Gold for titles */
 
-	--border-color: #f0f0f0; /* Foreground color for borders */
+	--border-color: #524f67; /* Highlight High for borders */
 	--border-style: solid;
 	--border-radius: 12px;
 
-	--scrollbar-primary: #bbbbbb; /* Using color11 for scrollbar */
-	--scrollbar-secondary: #1c1c1c; /* Matches background */
+	--scrollbar-primary: #c4a7e7; /* Iris for scrollbar */
+	--scrollbar-secondary: #191724; /* Matches background */
 }
 
 /* Optionally update additional themes or elements as needed */
